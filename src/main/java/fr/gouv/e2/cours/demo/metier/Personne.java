@@ -4,11 +4,25 @@ public class Personne {
     private String nir;
     private String nom;
     private String prenom;
+    public Genre genre;
 
-    public Personne(String prenom, String nom, String nir){
+    public Personne(Genre genre, String prenom, String nom, String nir){
+        this.genre = genre;
         this.nom = nom;
         this.prenom = prenom;
         this.nir = nir;
+    }
+
+    public String nir(){
+        return this.nir;
+    }
+
+    public String afficherNom(){
+        return this.nom;
+    }
+
+    public String toString(){
+        return this.genre.name() + this.nom + this.prenom;
     }
 
     @Override

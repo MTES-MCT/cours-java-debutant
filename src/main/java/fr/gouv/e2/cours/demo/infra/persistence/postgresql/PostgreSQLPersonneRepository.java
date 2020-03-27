@@ -21,5 +21,11 @@ public class PostgreSQLPersonneRepository implements PersonneRepository {
         return null;
     }
 
+    @Override
+    public void enregistrer(Personne personne) {
+        // TODO Auto-generated method stub
+
+    }
+
     
 }

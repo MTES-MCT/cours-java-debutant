@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Parent extends Personne {
 
-    public Parent(String prenom, String nom, String nir) {
-        super(prenom, nom, nir);
+    public Parent(Genre genre, String prenom, String nom, String nir) {
+        super(genre, prenom, nom, nir);
     }
 
     private List<Personne> enfants = new ArrayList<Personne>();
@@ -14,5 +14,10 @@ public class Parent extends Personne {
     public void ajouterEnfant(Personne enfant) {
         this.enfants.add(enfant);
     }
+
+    public String toString(){
+        return "Parent " + super.toString();
+    }
+
     
 }

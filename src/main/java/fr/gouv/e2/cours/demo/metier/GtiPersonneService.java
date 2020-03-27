@@ -7,7 +7,10 @@ public class GtiPersonneService implements PersonneService {
     private PersonneRepository personneRepository;
 
     public int compterPersonnes(){
-        List<Personne> personnes = personneRepository.rechercheToutes();
-        return personnes.size();
+        return this.personneRepository.rechercheToutes().size();
+    }
+
+    public GtiPersonneService(PersonneRepository personneRepository) {
+        this.personneRepository = personneRepository;
     }
 }
